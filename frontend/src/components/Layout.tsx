@@ -6,11 +6,7 @@ import { useSDK } from "@metamask/sdk-react";
 import Header from "./Header";
 import mintNftAbi from "../abis/mintNftAbi.json";
 
-export interface OutletContext {
-  account: string;
-  web3: Web3;
-  mintNftContract: Contract<ContractAbi>;
-}
+
 
 const Layout: FC = () => {
   const [account, setAccount] = useState<string>("");
@@ -32,7 +28,7 @@ const Layout: FC = () => {
     setMintNftContract(
       new web3.eth.Contract(
         mintNftAbi,
-        "0xe1602e1c9e86ef91d13f9571f99099af101e1007"
+        "0xAA49C81e0C5860D725C666031DB135e4893612D6"
       )
     );
   }, [web3]);
