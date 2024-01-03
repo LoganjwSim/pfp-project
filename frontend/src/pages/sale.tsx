@@ -45,6 +45,12 @@ const Sale: FC = () => {
 
   return (
     <div className="grow">
+      <img
+        className="mt-10 mb-10 w-full h-48 object-cover mb-4 rounded-lg"
+          src="https://placekitten.com/600/400"
+          alt="NFT"
+          
+        />
       <div className="text-center py-8">
         <h1 className="font-bold text-2xl">Sale NFTs</h1>
       </div>

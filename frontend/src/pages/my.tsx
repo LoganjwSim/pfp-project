@@ -65,6 +65,22 @@ const My: FC = () => {
     }
   };
 
+  // Sale Approved: True 권한
+  // const onClickSaleStatus = async () => {
+  //   try {
+  //     const response = await mintNftContract.methods
+  //       // @ts-expect-error
+  //       .setApprovalForAll(SALE_NFT_CONTRACT, !saleStatus)
+  //       .send({
+  //         from: account,
+  //       });
+
+  //     console.log(response);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
   const onClickSaleStatus = async () => {
     try {
       await mintNftContract.methods
@@ -99,6 +115,11 @@ const My: FC = () => {
   return (
     <>
       <div className="grow">
+        <img
+          className="mt-10 mb-10 w-full h-48 object-cover mb-4 rounded-lg"
+          src="https://placekitten.com/600/400"
+          alt="NFT"
+        />
         <div className="flex justify-between p-2">
           <button className="hover:text-gray-500" onClick={onClickSaleStatus}>
             Sale Approved: {saleStatus ? "TRUE" : "FALSE"}

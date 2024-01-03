@@ -32,9 +32,15 @@ const Layout: FC = () => {
   }, [web3]);
 
   return (
-    <div className="min-h-screen max-w-screen-md mx-auto flex flex-col">
-      <Header account={account} setAccount={setAccount} />
-      <Outlet context={{ account, web3, mintNftContract, saleNftContract }} />
+    <div className="bg-gray-900 text-white min-h-screen">
+      <header className="py-4 bg-black">
+        <div className="container mx-auto text-center font-bold text-2xl">
+          <Header account={account} setAccount={setAccount} />
+          <Outlet
+            context={{ account, web3, mintNftContract, saleNftContract }}
+          />
+        </div>
+      </header>
     </div>
   );
 };

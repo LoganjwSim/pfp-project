@@ -3,6 +3,7 @@ import { useOutletContext } from "react-router-dom";
 import { NftMetadata, OutletContext } from "../types";
 import axios from "axios";
 import NftCard from "../components/NftCard";
+import "animate.css";
 
 const GET_AMOUNT = 6;
 
@@ -85,8 +86,16 @@ const Home: FC = () => {
 
   return (
     <>
-      <div className="grow ">
-        <ul className="p-8 grid grid-cols-2 gap-8">
+      <div className="grow">
+        <img
+          className="mt-10 w-full h-48 object-cover mb-4 rounded-lg relative flex items-center z-0 overflow-hidden nft-gradient"
+          src="https://placekitten.com/600/400"
+          alt="NFT"
+        />
+        <h1 className="text-3xl font-bold mt-20 mb-20 animate__animated animate__bounce animate__infinite infinite">
+          Discover Lion NFTs
+        </h1>
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-gray-800 p-4 rounded-lg shadow-lg">
           {metadataArray?.map((v, i) => (
             <NftCard
               key={i}
